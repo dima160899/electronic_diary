@@ -1,0 +1,79 @@
+#technologist_guide_field {
+}
+
+#technologist_guide_field .caret{
+    font: normal normal normal 1.2em/1 FontAwesome;
+}
+
+#technologist_guide_field .lastChildInput{
+    font-size: 0.9em;
+}
+
+.instruments_list_li{
+    list-style: circle;
+    margin-left: 2rem !important;
+}
+
+#technologist_guide_field .lastChild{
+    font-size: 1.1em;
+    box-shadow: none !important;
+    color: #606469;
+    background-color: transparent;
+}
+
+#technologist_guide_field .caret:hover{
+    color: white !important;
+    background-color: #515356;
+}
+
+.detailChildren:hover{
+    background-color: black;
+    color: white;
+}
+
+.operationName{
+    z-index: 999;
+}
+
+#technologist_guide_accordion {
+    padding: 2% 4% 6% 2% !important;
+}
+
+.tg_header {
+    user-select: none;
+    background-color: #455a64;
+    color: white;
+    margin: 2% 0% 1% 0% !important;
+}
+
+.tg_div {
+    background-color: #e8fff6 !important;
+    overflow-y: hidden !important;
+    padding-bottom: 5% !important;
+}
+
+.techName:hover {
+    background-color: #dbf4ff;
+    list-style: none;
+}
+
+#technologist_guide_accordion div {
+    overflow-y: hidden !important;
+}
+
+.tg_elem_header {
+    user-select: none;
+    background-color: #ffffff;
+    font-weight: 500;
+    color: black;
+    border-color: #e0e0e0;
+    border-style: solid;
+    margin-left: -1% !important;
+}
+
+.tg_elem_div {
+    background-color: #f8f9fa !important;
+    padding: 8% 1% 8% 1%!important;
+    z-index: 999;
+    min-width: 100%;
+}

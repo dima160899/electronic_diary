@@ -1,0 +1,217 @@
+#esi_field {
+    width: 83%;
+    height: 100%;
+    float: right;
+    //box-shadow: 0 0 15px 1px #66a8bd;
+    border-width: 2px!important;
+    border-right: 0!important;
+   /* border: #d7e0df solid 4px;*/
+
+    padding: 2%;
+}
+
+.esi_branch_body{
+    height: 90%;
+    overflow-y: auto;
+    box-shadow: 0 5px 0px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
+}
+
+.lastChild{
+    border-left: none !important;
+    background-color: white;
+    font-size: 1.1em;
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
+}
+
+.lastChildInput{
+    width: 100%;
+    padding: 0.25rem !important;
+    font-size: 0.9em;
+    margin-left: 50%;
+}
+
+.lastChildInput:disabled{
+    border-left: none !important;
+    background-color: white !important;
+
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
+}
+
+.esi_branches_div::-webkit-scrollbar {
+    width: 3px;
+}
+
+.esi_branches_div::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.esi_branches_div::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.esi_branches_div{
+overflow-y: scroll;
+    max-height: 83.2%;
+}
+
+.esi_branches {
+    padding: 5px 5px 5px 0;
+}
+
+.esi_header {
+    user-select: none;
+    cursor: pointer !important;
+    height: 6.6%;
+    padding: 0.5em 1em;
+    margin-bottom: 2%;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    background-color: #1c2331e3 !important;
+    transition: all 1s;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.esi_branch {
+    width: 100%;
+    height: 30%;
+    min-height: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.esi_branch_row {
+    width: 100%;
+}
+
+.esi_branch_sh {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.esi_branch_header {
+    text-align: center;
+    color: black;
+    width: 95%;
+    height: 20%;
+    min-height: 40px;
+    border-radius: 2px 2px 0 0;
+    float: right;
+    background-color:#eeefea;
+    border: #eb737c solid 2px;
+    //box-shadow: 0 0 1px 1px #66a8bd;
+}
+
+.esi_branch_header:active {
+/ / transform: scale(0.99);
+}
+
+.esi_branch_switcher {
+    width: 20px;
+    min-width: 20px;
+    max-width: 20px;
+    height: 20%;
+    min-height: 20px;
+    float: left;
+    cursor: pointer;
+    text-align: center;
+}
+
+.esi_branch_content_row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.esi_branch_content_noNiv{
+    width: 20px;
+    min-width: 20px;
+    max-width: 20px;
+    height: 100%;
+    float: left;
+    border-left: black solid 1px;
+    display: block;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.esi_branch_content {
+    background-color: #eff0eb;
+    border: #eb737c solid 2px;
+    border-top: 0;
+    margin-bottom: 3px;
+    min-height: 50px;
+    height: 100%;
+    width: 95%;
+    float: right;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.esi_branch_content_ul{
+    padding-left: 5px;
+    list-style-type: none;
+}
+
+.esi_cont_inside1{
+    background-color: #eeefea !important;
+}
+.esi_cont_inside2{
+    background-color: #FFFFFF !important;
+}
+.esi_header_alt1{
+    background-color: #f7aec2!important;
+}
+
+.esi_branch_switcher_plus{
+    //color: #f7aec2;
+   /* background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+ background-image: url("../icons/plus.svg");*/
+}
+
+.esi_branch_switcher_minus{
+    color: #f7aec2;
+    /*background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../icons/minus.svg");*/
+}
+
+
+.slider_button{
+    background-color: #45526e;
+    color: #fff;
+    user-select: none;
+    float: left;
+    height: 7%;
+    max-height: 7%;
+    border-width: 2px!important;
+    border-right: 0!important;
+    width: 17%;
+    cursor: pointer;
+}
+
+.transformed{
+    text-align: center;
+    //transform: rotate(90deg);
+}
+
+.slider_main{
+    top: 18%;
+    z-index: 15;
+    width: 600px;
+    height: 500px;
+    max-height: 80vh;
+    right: -500px;
+    position: fixed;
+}
+
+.esi_branch_btn{
+    height: 10%;
+    max-height: 10%;
+}

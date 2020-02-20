@@ -1,0 +1,577 @@
+.canvimg {
+    height: 15vw;
+    margin: 2vw;
+    z-index: 1;
+}
+
+.dialog-scheme{
+    border: 1px solid #c5c5c5;
+}
+
+.cross-scheme{
+    background: url("../images/cross.svg");
+}
+
+.cross-scheme:hover{
+    background-color: #c7c7ca;
+}
+
+#scheme1 {
+    width: 90%;
+    height: 100%;
+    position: relative;
+    /*width: 944px;
+    height: 450px;*/
+}
+
+#hidedraw {
+    position: absolute;
+    z-index: 5;
+}
+
+#Kontur1 {
+    position: absolute;
+    margin-left: -3px;
+}
+
+#razmNumber1 {
+    position: absolute;
+    top: 93px;
+    width: 40px;
+    height: 20px;
+    left: 84px;
+}
+
+#razmNumber2 {
+    position: absolute;
+    bottom: 16px;
+    width: 40px;
+    height: 20px;
+    left: 315px;
+}
+
+#razmNumber3 {
+    position: absolute;
+    top: 162px;
+    width: 40px;
+    height: 20px;
+    left: 662px;
+}
+
+#razmer1 {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 0;
+}
+
+#field3D  {
+    width: 90%;
+    height: 87%;
+    max-width:955px;
+    max-height:500px;
+    min-width: 955px;
+    min-height: 500px;
+}
+#field3DAll{
+    border: 3px solid black;
+    border-bottom: 0;
+    padding: 0;
+    max-width:955px;
+    min-width: 955px;
+}
+
+#scheme1 div canvas {
+    display: none;
+}
+
+#drawcanv:hover {
+    cursor: url(../images/scheme/pen1.png) 0 3, auto;
+}
+
+#fieldscheme{
+    width: 100%;
+    height: 87%;
+}
+
+#drawcanv {
+    position:absolute;
+    margin-left: -3px;
+}
+
+.canvimgdone {
+    height: 15vw;
+    margin: 2vw;
+    filter: brightness(1);
+    z-index: 1;
+}
+
+.holst {
+    width: 30vw;
+    height: 30vw;
+    background: white;
+    margin: 1.5vw;
+}
+
+.typeproj {
+    display:block;
+    margin-left:1.5vw;
+    margin-top:2vw;
+    font-size:2vw;
+}
+
+#bolthideimg111 {
+    position: absolute;
+    height: 2vw;
+    margin-left: 3.35vw;
+    z-index: 2;
+    transform: rotate(-90deg);
+    margin-top: 14.4vw;
+}
+
+#bolthideimg112 {
+    position: absolute;
+    height: 2vw;
+    margin-left: 31.35vw;
+    z-index: 2;
+    transform: rotate(-90deg);
+    margin-top: 14.4vw;
+}
+
+#bolthideimg121 {
+    position: absolute;
+    height: 2vw;
+    margin-left: 0.5vw;
+    z-index: 2;
+    transform: rotate(-90deg);
+    margin-top: 38.1vw;
+}
+
+#bolthideimg122 {
+    position: absolute;
+    height: 2vw;
+    margin-left: 23.7vw;
+    z-index: 2;
+    transform: rotate(-90deg);
+    margin-top: 38.1vw;
+}
+
+#bolthideimg131 {
+    position: absolute;
+    height: 2.5vw;
+    margin-left: 5.5vw;
+    z-index: 2;
+    transform: rotate(-90deg);
+    margin-top: 80vw;
+}
+
+#bolthideimg132 {
+    position: absolute;
+    height: 2.5vw;
+    margin-left: 5.5vw;
+    z-index: 2;
+    transform: rotate(-90deg);
+    margin-top: 55.2vw;
+}
+
+#bolthideimg133 {
+    position: absolute;
+    height: 2.5vw;
+    margin-left: 35.5vw;
+    z-index: 2;
+    transform: rotate(-90deg);
+    margin-top: 55.2vw;
+}
+
+#bolthideimg134 {
+    position: absolute;
+    height: 2.5vw;
+    margin-left: 35.5vw;
+    z-index: 2;
+    transform: rotate(-90deg);
+    margin-top: 80vw;
+}
+
+#bolthideimg5 {
+    position: absolute;
+    height: 2vw;
+    margin-left: -7.5vw;
+    z-index: 2;
+    transform: rotate(180deg);
+    margin-top: 9.5vw;
+}
+
+#bolthideimg211 {
+    position: absolute;
+    height: 2vw;
+    margin-left: 11vw;
+    z-index: 2;
+    margin-top: 19.4vw;
+    transform: rotate(-90deg);
+}
+
+#bolthideimg212 {
+    position: absolute;
+    height: 2vw;
+    margin-left: 35.6vw;
+    z-index: 2;
+    margin-top: 19.4vw;
+    transform: rotate(-90deg);
+}
+
+#bolthideimg221 {
+    position: absolute;
+    height: 2vw;
+    margin-left: 22.15vw;
+    z-index: 2;
+    margin-top: 43.2vw;
+    transform: rotate(-90deg);
+}
+
+#bolthideimg222 {
+    position: absolute;
+    height: 2vw;
+    margin-left: 5.6vw;
+    z-index: 2;
+    margin-top: 43.2vw;
+    transform: rotate(-90deg);
+}
+
+#bolthideimg231 {
+    position: absolute;
+    height: 2.5vw;
+    margin-left: 12vw;
+    z-index: 2;
+    margin-top: 77vw;
+    transform: rotate(-90deg);
+}
+
+#bolthideimg232 {
+    position: absolute;
+    height: 2.5vw;
+    margin-left: 38.4vw;
+    z-index: 2;
+    margin-top: 77vw;
+    transform: rotate(-90deg);
+}
+
+#bolthideimg233 {
+    position: absolute;
+    height: 2.5vw;
+    margin-left: 38.4vw;
+    z-index: 2;
+    margin-top: 59vw;
+    transform: rotate(-90deg);
+}
+
+#bolthideimg234 {
+    position: absolute;
+    height: 2.5vw;
+    margin-left: 12.2vw;
+    z-index: 2;
+    margin-top: 59vw;
+    transform: rotate(-90deg);
+}
+
+#bolthideimg321{
+    position: absolute;
+    height: 1.5vw;
+    margin-left: -0.1vw;
+    z-index: 2;
+    margin-top: 36.5vw;
+}
+
+#bolthideimg331{
+    position: absolute;
+    height: 1.7vw;
+    margin-left: 6.5vw;
+    z-index: 2;
+    margin-top: 54.6vw;
+    transform: rotate(90deg);
+}
+
+#bolthideimg332{
+    position: absolute;
+    height: 1.7vw;
+    margin-left: 8.5vw;
+    z-index: 2;
+    margin-top: 54.6vw;
+    transform: rotate(90deg);
+}
+
+#bolthideimg333 {
+    position: absolute;
+    height: 1.7vw;
+    margin-left: 10.5vw;
+    z-index: 2;
+    margin-top: 54.6vw;
+    transform: rotate(90deg);
+}
+
+#bolthideimg334 {
+    position: absolute;
+    height: 1.7vw;
+    margin-left: 12.5vw;
+    z-index: 2;
+    margin-top: 54.6vw;
+    transform: rotate(90deg);
+}
+
+#bolthideimg335 {
+    position: absolute;
+    height: 1.7vw;
+    margin-left: 14.5vw;
+    z-index: 2;
+    margin-top: 54.6vw;
+    transform: rotate(90deg);
+}
+
+#bolthideimg336 {
+    position: absolute;
+    height: 1.7vw;
+    margin-left: 22.5vw;
+    z-index: 2;
+    margin-top: 54.6vw;
+    transform: rotate(90deg);
+}
+
+#bolthideimg337 {
+    position: absolute;
+    height: 1.7vw;
+    margin-left: 24.5vw;
+    z-index: 2;
+    margin-top: 54.6vw;
+    transform: rotate(90deg);
+}
+
+#bolthideimg338 {
+    position: absolute;
+    height: 1.7vw;
+    margin-left: 26.5vw;
+    z-index: 2;
+    margin-top: 54.6vw;
+    transform: rotate(90deg);
+}
+
+#bolthideimg339{
+    position: absolute;
+    height: 1.7vw;
+    margin-left: 28.5vw;
+    z-index: 2;
+    margin-top: 54.6vw;
+    transform: rotate(90deg);
+}
+
+#bolthideimg330 {
+    position: absolute;
+    height: 1.7vw;
+    margin-left: 30.5vw;
+    z-index: 2;
+    margin-top: 54.6vw;
+    transform: rotate(90deg);
+}
+
+#bolthideimg33 {
+    position: absolute;
+    height: 1.5vw;
+    margin-left: 15.4vw;
+    z-index: 2;
+    margin-top: 5.5vw;
+    transform: rotate(90deg);
+}
+
+#bolthideimg44 {
+    position: absolute;
+    height: 1.5vw;
+    margin-left: -18.8vw;
+    z-index: 2;
+    margin-top: 3.6vw;
+}
+
+#bolthideimg55 {
+    position: absolute;
+    height: 1.5vw;
+    margin-left: -18.8vw;
+    z-index: 2;
+    margin-top: 15.6vw;
+}
+
+#bolthideimg311 {
+    position: absolute;
+    height: 1.6vw;
+    margin-left: 8.8vw;
+    z-index: 2;
+    margin-top: 12.6vw;
+}
+
+#bolthideimg312 {
+    position: absolute;
+    height: 1.6vw;
+    margin-left: 10.8vw;
+    z-index: 2;
+    margin-top: 12.6vw;
+}
+
+#bolthideimg313 {
+    position: absolute;
+    height: 1.6vw;
+    margin-left: 12.8vw;
+    z-index: 2;
+    margin-top: 12.6vw;
+}
+
+#bolthideimg314 {
+    position: absolute;
+    height: 1.6vw;
+    margin-left: 14.8vw;
+    z-index: 2;
+    margin-top: 12.6vw;
+}
+
+#bolthideimg315 {
+    position: absolute;
+    height: 1.6vw;
+    margin-left: 16.8vw;
+    z-index: 2;
+    margin-top: 12.6vw;
+}
+
+#bolthideimg316 {
+    position: absolute;
+    height: 1.6vw;
+    margin-left: 22.5vw;
+    z-index: 2;
+    margin-top: 12.6vw;
+}
+
+#bolthideimg317 {
+    position: absolute;
+    height: 1.6vw;
+    margin-left: 24.5vw;
+    z-index: 2;
+    margin-top: 12.6vw;
+}
+
+#bolthideimg318 {
+    position: absolute;
+    height: 1.6vw;
+    margin-left: 26.5vw;
+    z-index: 2;
+    margin-top: 12.6vw;
+}
+
+#bolthideimg319 {
+    position: absolute;
+    height: 1.6vw;
+    margin-left: 28.5vw;
+    z-index: 2;
+    margin-top: 12.6vw;
+}
+
+#bolthideimg310 {
+    position: absolute;
+    height: 1.6vw;
+    margin-left: 30.5vw;
+    z-index: 2;
+    margin-top: 12.6vw;
+}
+
+section {
+    /*width: 74vw;*/
+    width: 71vw;
+    margin:auto;
+    position: relative;
+}
+
+#canv1:hover {
+    cursor: url(../images/scheme/pen1.png) 0 3, auto;
+}
+
+#canv2:hover {
+    cursor: url(../images/scheme/pen1.png) 0 3, auto;
+}
+
+#canv3:hover {
+    cursor: url(../images/scheme/pen1.png) 0 3, auto;
+}
+
+#canv1 {
+    position:absolute;
+    /*height: 16.3vw;
+    width: 37.5vw;*/
+    /*margin: 1.5vw;*/
+    z-index: 3;
+    /*padding: 0.5vw;*/
+    border: 1px dashed black;
+    width: 330px;
+    height: 140px;
+    margin-left: 168px;
+    margin-top: 9px;
+}
+
+#canv2 {
+    position:absolute;
+    /*height: 16vw;
+    width: 27vw;*/
+    margin: 1.5vw;
+    z-index: 3;
+    padding: 0.5vw;
+    border: 1px dashed black;
+}
+
+#canv3 {
+    position:absolute;
+    /*height: 29.3vw;
+    width: 40.4vw;*/
+    margin: 1.5vw;
+    z-index: 3;
+    padding: 0.5vw;
+    border: 1px dashed black;
+}
+
+section div {
+    float:left;
+
+}
+
+#ready {
+    width: 100%;
+    margin-bottom: 3%;
+    display:none;
+}
+
+/*for example*/
+
+#standarts {
+    position:absolute;
+    width: 14vw;
+    text-align: center;
+}
+
+#default1{
+    width: 80%;
+    cursor: pointer;
+}
+
+#default2{
+    width: 80%;
+    background: gainsboro;
+    cursor: pointer;
+}
+
+aside h1 {
+    font-size:1.7vw;
+}
+
+aside div {
+
+}
+
+#check1 {
+    position: absolute;
+    cursor: pointer;
+}
+
+#check2 {
+    position: absolute;
+    cursor: pointer;
+}
