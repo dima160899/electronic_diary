@@ -27,8 +27,8 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
     <form class="form-signin login_form" method="post">
 
       <div class="text-center mb-4">
-        <img class="mb-4" src="<?php echo conf::$SITE_URL ?>images/niiis_sm.png" alt="" width="72" height="72">
-        <h1 class="h3 mb-3 font-weight-normal">Цифровая фабрика<br>IT-процессов</h1>
+        <img class="mb-4" src="<?php echo conf::$SITE_URL ?>images/diary_sm.png" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Электронный дневник</h1>
       </div>
 
       <?php if (!empty($data['message'])): ?>
@@ -51,8 +51,7 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
       </div>
 
       <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
-      <p class="mt-5 mb-3 text-muted text-center">&copy; НГТУ им. Р.Е.Алексеева<br>
-        <a href="http://62.109.26.219/pgadmin4/" target="_blank">pgAdmin</a></p>
+      <p class="mt-5 mb-3 text-muted text-center">&copy; Школа N<br></p>
 
     </form>
   </body>

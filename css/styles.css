@@ -12,6 +12,38 @@
     height: 100% !important;*/
 }
 
+.outline-none{
+    outline: none !important;
+}
+
+.border-color-transparent{
+    border-color: transparent !important;
+}
+
+.border-bottom-color-gray{
+    border-bottom-color: #c3c3c3 !important;
+}
+
+.font-size-12-em{
+    font-size: 1.2em !important;
+}
+
+.opacity-98{
+    opacity: 0.98;
+}
+
+.list-style-disk{
+    list-style: disc !important;
+}
+
+#tabs li:hover{
+    cursor: pointer;
+}
+
+#tabs .nav-link.active{
+    background-color: #202021;
+}
+
 .myRow{
     /*height: 97vh;*/
 }
@@ -55,6 +87,13 @@ h4{
     color: #ffffff;
 }
 
+.logoutButton{
+    font: normal normal normal 1.15em/1 FontAwesome;
+}
+
+.logoutButton:before{
+}
+
 hr{
     margin-top: 0;
     margin-bottom: 4px;
@@ -62,4 +101,8 @@ hr{
 
 .blur-filter{
     filter: blur(10px);
+}
+
+.font-family-fontAwesome{
+    font-family: FontAwesome;
 }

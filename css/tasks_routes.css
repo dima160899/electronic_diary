@@ -94,3 +94,33 @@
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
+
+#task_routes_my_tasks{
+    z-index: 10;
+    position: fixed;
+    width: 600px;
+    height: 300px;
+    //right: -503px;
+    top: 15rem;
+}
+
+.tasks_routes_reloadShell input[type=radio]{
+    display:none;
+    margin:10px;
+}
+
+.tasks_routes_reloadShell input[type=radio] + label {
+    display:inline-block;
+    padding: 5px;
+    background-color: #e7e7e7;
+    border-color: #ddd;
+    cursor: pointer;
+}
+/*
+ Change background color for label next to checked radio button
+ to make it look like highlighted button
+*/
+.tasks_routes_reloadShell input[type=radio]:checked + label {
+    background-image: none;
+    background-color:#d0d0d0;
+}

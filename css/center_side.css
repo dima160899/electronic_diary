@@ -1,15 +1,33 @@
 .myTabs {
     /*background-color: #d7e0df;*/
-    height: 95vh;
-    max-height: 1400px;
+    //height: 95vh;
+    /*max-height: 1400px;*/
     color: black !important;
 }
+
+@media (min-width: 1600px) {
+    .d-xxl-block{
+        display: block !important;
+    }
+}
+
+@media (max-width: 1599px) {
+    .ml-sm-to-xxl-auto{
+        margin-left: auto !important;
+    }
+}
+
+body{
+     overflow-y: scroll;
+ }
 
 #tabs ul li a {
     cursor: inherit !important;
     color: #fff;
     /*background-color: rgba(0,0,0,0.2);*/
     border-radius: .25rem;
+    width: 100%;
+    text-align: center;
     -webkit-transition: all 1s;
     transition: all 1s;
     border-color: #dee2e6 #dee2e6 #fff;
@@ -63,7 +81,7 @@
 }
 
 .myTabsTab, #print_btn {
-    background-color: #45526e;
+    background-color: #6c757d ;
     flex-basis: 0;
     flex-grow: 1;
     overflow: hidden;

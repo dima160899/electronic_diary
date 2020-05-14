@@ -30,11 +30,22 @@ class Route
         $modul = $path[0];
     }
     if(sys::is_autorised()){
-        if($_SESSION["niiis"]["role"] === "administrator"){
+        
+        if($_SESSION["diary"]["user_status"] === "administrator"){
             if($modul =='default'){
                 $modul ='admin_cab';
             }
         }
+        if($_SESSION["diary"]["user_status"] === "teacher"){
+            if($modul =='default'){
+                $modul ='teacher_cab';
+            }
+        }
+        if($_SESSION["diary"]["user_status"] === "student"){
+            if($modul =='default'){
+                $modul ='student_cab';
+            }
+        }     
       require_once conf::$ROOT.'system/etc/functions.php';
       
       if($modul=='ajax'){
@@ -91,13 +102,35 @@ class Route
                   }
                   else
                   {
-    //          			throw new Exception('action_not_found');
+                        $action = 'index';
+    			$param='';
+                    if (isset($param))
+                        $controller->$action($param);
+                    else
+                        $controller->$action();
                   }
             }else{
               throw New Exception('Controller_class_not_found');
             }
           }else{
-            throw New Exception('Controller_not_found');
+            
+            if($_SESSION["diary"]["user_status"] === "administrator"){
+                $controller_name ='admin_cab';
+            }
+            if($_SESSION["diary"]["user_status"] === "teacher"){
+                    $controller_name ='teacher_cab';
+            }
+            if($_SESSION["diary"]["user_status"] === "student"){
+                    $controller_name ='student_cab';
+            }     
+            $controller_name .= '_controller';
+            $controller_file = $controller_name.'.php';
+            include "system/controllers/".$controller_file;
+            echo $controller_name;
+            $controller = new $controller_name;
+              
+              $action = 'index';
+              $controller->$action();
           }
       }
     }else{

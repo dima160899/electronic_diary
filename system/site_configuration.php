@@ -21,7 +21,7 @@ class conf{
 
 conf::$VERSION = 2;  // Устанавливается в system.php вызовом sys::version()
 conf::$SITE_NAME = 'Цифровая фабрика ИТ-процессов';
-conf::$PROJECT_NAME = 'niiis';
+conf::$PROJECT_NAME = 'diary';
 conf::$SITE_URL_SHORT = $_SERVER['SERVER_NAME'];
 conf::$SITE_PATH = dirname(__FILE__).DIRECTORY_SEPARATOR.'../';
 conf::$SESSION_TIME = 2592000;
@@ -31,11 +31,11 @@ conf::$SITE_URL = 'http://'.$_SERVER['SERVER_NAME'].'/';
 conf::$SITE_LOCAL=true;
 conf::$SITE_SUBDIR_INDEX=0; // например http://site.ru/level1/level2/ - 2
 
-conf::$DB_SERVER_NAME='62.109.26.219';
+conf::$DB_SERVER_NAME='localhost';
 conf::$DB_PORT='5432';
-conf::$DB_NAME='niiis';
-conf::$DB_USER_NAME='site';
-conf::$DB_PASSWORD='123qweasd';
+conf::$DB_NAME='LAB_DB';
+conf::$DB_USER_NAME='dmitry';
+conf::$DB_PASSWORD='ubvyfpbz50';
 
 error_reporting(0);
 ini_set( 'display_errors', 1 );

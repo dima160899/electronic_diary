@@ -6,7 +6,7 @@ class start_ajax_model extends model {
         $Q = [];
 
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
-                $sql = "SELECT date_trunc('seconds',m.DATE_CHANGE) as date_change, u.LOGIN 
+                $sql = "SELECT date_trunc('seconds',m.DATE_CHANGE) as date_change, u.LOGIN, u.fio
             FROM MODIFY_DATE m INNER JOIN
             USERS u on u.id = m.user_id
                 ";
@@ -23,9 +23,9 @@ class start_ajax_model extends model {
                         $round = $row['cnfval'];
                     }
                 }
-                $_SESSION["niiis"]["round"] = $round - '0';
-                return array("login" => sys::user_login(), "role" => $_SESSION['niiis']['role'], "round" => $round - '0',
-                    "server_name" => trim($_SERVER['SERVER_NAME'], '/'), "name" => $_SESSION['niiis']['name'], "date_change" => substr($Q1[0]["date_change"], 0, -3), "login_change" => $Q1[0]["login"]);
+                $_SESSION["diary"]["round"] = $round - '0';
+                return array("login" => sys::user_login(), "role" => $_SESSION['diary']['role'], "round" => $round - '0',
+                    "server_name" => trim($_SERVER['SERVER_NAME'], '/'), "fio" => $Q1[0]["fio"], "name" => $_SESSION['diary']['name'], "date_change" => substr($Q1[0]["date_change"], 0, -3), "login_change" => $Q1[0]["login"]);
         } else {
             return array("response" => "NOT FOUND GET REQUEST");
         }
@@ -36,7 +36,7 @@ class start_ajax_model extends model {
             $sql = "UPDATE SYS_CNF SET cnfval=:round_val where cnfname = 'round'";
             $q = sys::$PDO->prepare($sql);
             $q->execute(array("round_val" => $_GET["round"]));
-            $_SESSION["niiis"]["round"] = $_GET['round'];
+            $_SESSION["diary"]["round"] = $_GET['round'];
             return(array("response" => 200));
         } else {
             return array("response" => "NOT FOUND GET REQUEST");

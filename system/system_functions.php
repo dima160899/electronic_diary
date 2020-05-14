@@ -22,7 +22,7 @@ class sys {
 
   //Проверка авторизации пользователя
   static function is_autorised() {
-    if (isset($_SESSION['niiis']['user_id'])){
+    if (isset($_SESSION['diary']['user_id'])){
       return true;
     }else{
       return false;
@@ -39,32 +39,27 @@ class sys {
   static function autorization($name, $password) {
     //Проверяем наличие такого пользователя с email
     $SQL = "SELECT 
-            ug.DESCR, u.ID,ug.USER_STATUS
-            FROM USERS AS u 
-            inner join USER_GROUP ug on ug.GROUP_ID=u.GROUP_USER_ID
-            where u.LOGIN=:login and u.PASSWORD=:password and u.ACTIVE_SIGN='1'";
+            u.profile_id,g.user_status
+            FROM users u left join
+            user_group g on g.id = u.group_id
+            where u.LOGIN=:login
+            and u.PASSWORD=:password";
     $R = array('result' => '0');
     $autorization = '';
     $ip = $_SERVER['REMOTE_ADDR'];
     $q = sys::$PDO->prepare($SQL);
     $q->execute(array('login'=>sys::secure($name),'password'=>sys::secure($password)));
     $result = $q->fetchAll();
-    
     if ($result) {
       // нашли юзера с заданным логином, паролем
-
         $row = $result[0];
-        $_SESSION['niiis']['user_id'] = (int) $row['id'];
-        $_SESSION['niiis']['user_status'] = $row['user_status'];
-        $_SESSION['niiis']['round'] = 1;
-        $_SESSION['niiis']['role'] = $row['user_status'];
-        $_SESSION['niiis']['name'] = $row['descr'];
-      
+        $_SESSION['diary']['user_id'] = (int) $row['profile_id'];
+        $_SESSION['diary']['user_status'] = $row['user_status'];
       // если admin, можем менять пользователей не делая relogin
       // В остальных случаях не использовать $_SESSION['hostel']['is_super_admin'] !
       // для проверки принадлежности к админу, а использовать sys::user_group()
       if($row['user_status']==='administrator'){
-        $_SESSION['niiis']['login'] = $name;
+        $_SESSION['diary']['login'] = $name;
         sys::session_set('is_super_admin', 1, false);
       }else{
         sys::session_set('is_super_admin', 0, false);
@@ -146,8 +141,8 @@ class sys {
   */
   static function user_login() {
   $R = '';
-  if (isset($_SESSION['niiis']['user_id'])) {
-    $id = (int) $_SESSION['niiis']['user_id'];
+  if (isset($_SESSION['diary']['user_id'])) {
+    $id = (int) $_SESSION['diary']['user_id'];
     $sql="select LOGIN from USERS where ID=:id";
     $q = sys::$PDO->prepare($sql);
     $q->execute(array('id' => $id));
@@ -169,7 +164,7 @@ class sys {
    * @param type $cookie_set
    */
   static function session_set($var,$val,$cookie_set=true){
-    $_SESSION['niiis'][$var]=$val;
+    $_SESSION['diary'][$var]=$val;
 
     if($cookie_set && isset($_COOKIE['n_token'])){
       // Установим куки
@@ -188,7 +183,7 @@ class sys {
 
       $session='';
       $i=0;
-      foreach($_SESSION['niiis'] as $k=>$v){
+      foreach($_SESSION['diary'] as $k=>$v){
         if($i++ !== 0){$session.=",";}
         $session.="$k=$v";
       }
@@ -210,8 +205,8 @@ class sys {
   }
   
   static function session($var){
-    if(isset($_SESSION['niiis'][$var])){
-      return $_SESSION['niiis'][$var];
+    if(isset($_SESSION['diary'][$var])){
+      return $_SESSION['diary'][$var];
     }else{
       return FALSE;
     }
